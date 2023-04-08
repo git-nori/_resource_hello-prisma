@@ -1,0 +1,11 @@
+curl -X POST -H "Content-Type: application/json" -d '{"name":"sensuikan1973", "email":"hoge@co.jp"}' localhost:3000/user
+
+// getAllPosts
+curl -X GET -H "Content-Type: application/json" localhost:3000/feed | jq
+// draft
+curl -X POST -H "Content-Type: application/json" -d '{"title":"title1", "authorEmail":"user2@co.jp"}' localhost:3000/post | jq
+// publish
+curl -X PUT -H "Content-Type: application/json" localhost:3000/publish/1 | jq
+// delete
+curl -X DELETE -H "Content-Type: application/json" localhost:3000/post/1 | jq
+
